@@ -55,15 +55,15 @@ class HelloWorld extends React.Component{
 
 
 
-// setInterval(() => {
-//   ReactDOM.render(
-//     // <HelloWorld number={Math.round(1.2)}/>,
-//     // <Childcom number={Math.random()}/>,
-//     <ReactState />, //反复渲染同一个组件  不会重新初始化  构造函数不会重新调用，渲染函数会重新调用 所以在render中 重新获取state定义的数据
-//     document.getElementById('root')
-//   );
-//   console.log(new Date())
-// }, 1000);
+setInterval(() => {
+  ReactDOM.render(
+    // <HelloWorld number={Math.round(1.2)}/>,
+    // <Childcom number={Math.random()}/>,
+    <ReactState />, //反复渲染同一个组件  不会重新初始化  构造函数不会重新调用，渲染函数会重新调用 所以在render中 重新获取state定义的数据
+    document.getElementById('root')
+  );
+  console.log(new Date())
+}, 1000);
 
 ReactDOM.render(
   // <HelloWorld number={Math.round(1.2)}/>,
@@ -71,6 +71,7 @@ ReactDOM.render(
   <ReactState />, //反复渲染同一个组件  不会重新初始化  构造函数不会重新调用，渲染函数会重新调用 所以在render中 重新获取state定义的数据
   document.getElementById('root')
 );
+console.log(new Date())
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
