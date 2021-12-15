@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import ReactState from './react_state';
+import Tab from './tab';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -55,20 +56,18 @@ class HelloWorld extends React.Component{
 
 
 
-setInterval(() => {
-  ReactDOM.render(
-    // <HelloWorld number={Math.round(1.2)}/>,
-    // <Childcom number={Math.random()}/>,
-    <ReactState />, //反复渲染同一个组件  不会重新初始化  构造函数不会重新调用，渲染函数会重新调用 所以在render中 重新获取state定义的数据
-    document.getElementById('root')
-  );
-  console.log(new Date())
-}, 1000);
+// setInterval(() => {
+//   ReactDOM.render(
+//     // <HelloWorld number={Math.round(1.2)}/>,
+//     // <Childcom number={Math.random()}/>,
+//     <ReactState />, //反复渲染同一个组件  不会重新初始化  构造函数不会重新调用，渲染函数会重新调用 所以在render中 重新获取state定义的数据
+//     document.getElementById('root')
+//   );
+//   console.log(new Date())
+// }, 1000);
 
 ReactDOM.render(
-  // <HelloWorld number={Math.round(1.2)}/>,
-  // <Childcom number={Math.random()}/>,
-  <ReactState />, //反复渲染同一个组件  不会重新初始化  构造函数不会重新调用，渲染函数会重新调用 所以在render中 重新获取state定义的数据
+  <Tab />, 
   document.getElementById('root')
 );
 console.log(new Date())
